@@ -19,7 +19,8 @@
     "react-infinite-scroll-component": "^6.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "recharts": "^1.8.5"
+    "recharts": "^1.8.5",
+    "virtual-stock-market-simulator": "file:.."
   },
   "scripts": {
     "start": "react-scripts start --openssl-legacy-provider ",

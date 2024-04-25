@@ -114,7 +114,7 @@ exports.getStockForUser = async (req, res) => {
     const stocks = await Stock.find({ userId: req.params.userId });
     // console.log("Stokes",stocks);
     const stocksData = await getPricesData(stocks); 
-    console.log("okk");
+    // console.log("okk");
     const modifiedStocks = stocks.map((stock) => {
       let name,currentPrice,currentDate;
       data.stockData.forEach((stockData) => {
@@ -141,7 +141,7 @@ exports.getStockForUser = async (req, res) => {
         currentPrice,
       };
     });
-   console.log(modifiedStocks);
+  //  console.log(modifiedStocks);
     return res.status(200).json({ status: "success", stocks: modifiedStocks, });
   } catch (error) {
     return res.status(200).json({ status: "fail",  message: "Something unexpected happened.", });

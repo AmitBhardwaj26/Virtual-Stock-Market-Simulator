@@ -8,7 +8,7 @@ exports.getNewsData = async (req, res) => {
     // a1ea30408f2145bfa57e5fdbf911af12
     // 6547c034483042a48501651131ae7cef
 
-    console.log("API is Called");
+    // console.log("API is Called");
     const token = process.env.NEWS_API_KEY;
     const url2 = `https://newsapi.org/v2/everything?q=business&sortBy=publishedAt&apiKey=${token}&language=en&pageSize=6&page=${req.params.page}`;
     const response2 = await Axios.get(url2);

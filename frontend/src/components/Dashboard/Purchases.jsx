@@ -18,7 +18,7 @@ const Purchases = ({ purchasedStocks }) => {
   };
 
   const openSaleModal = (stock) => {
-    console.log(stock);
+    // console.log(stock);
     setStock(stock);
     setStart(true);
   };

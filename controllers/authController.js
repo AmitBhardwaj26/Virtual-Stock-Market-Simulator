@@ -81,7 +81,7 @@ exports.logingoogle = async (req, res) => {
   }
 
   // all correct till here
-  console.log("oh yes");
+  // console.log("oh yes");
   const newUser = new User({ username, password });
   const savedUser = await newUser.save(); // it will return object id of saved user
  

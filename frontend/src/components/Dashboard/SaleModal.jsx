@@ -50,12 +50,12 @@ const SaleModalContent = ({ setStart, stock }) => {
       price: Number(stock.currentPrice),
     };
     
-    console.log(data);
+    // console.log(data);
     const url = `/api/stock`;
     const response = await Axios.patch(url, data, {
       headers,
     });
-    console.log("ok"+response);
+    // console.log("ok"+response);
     if (response.data.status === "success") {
       setStart(false);
       // window.location.reload();

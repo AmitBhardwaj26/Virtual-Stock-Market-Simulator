@@ -123,7 +123,7 @@ const Login = () => {
         spacing={0}
         direction="column"
         alignItems="center"
-        justify="center"
+        justify-content="center"
         style={{ minHeight: "100vh" }}
       >
         <Box width="70vh" boxShadow={1}>
@@ -199,7 +199,7 @@ const Login = () => {
                 <br />
               </form>
 
-              <Grid container justify="center">
+              <Grid container justify-content="center">
                 <Grid item>
                   <Link href="/register" variant="body2">
                     {" "}

@@ -115,6 +115,104 @@ const Login = () => {
 
   if (user === "LOADING") return <> Loading ... </>;
 
+  // return (
+  //   <div className={styles.background}>
+  //     <CssBaseline />
+  //     <Grid
+  //       container
+  //       spacing={0}
+  //       direction="column"
+  //       alignItems="center"
+  //       style={{ justifyContent: "center", minHeight: "100vh" }}
+  //     >
+  //       <Box width="70vh" boxShadow={1}>
+  //         <Card className={styles.paper}>
+  //           <CardContent>
+  //             <Typography component="h1" variant="h5">
+  //               {" "}
+  //               Login{" "}
+  //             </Typography>
+  //             <form className={styles.form} onSubmit={onSubmit}>
+  //               <TextField
+  //                 variant="outlined"
+  //                 margin="normal"
+  //                 required
+  //                 fullWidth
+  //                 id="username"
+  //                 label="Username"
+  //                 name="username"
+  //                 autoComplete="username"
+  //                 error={usernameError.length > 0 ? true : false}
+  //                 helperText={usernameError}
+  //                 value={username}
+  //                 onChange={onChangeUsername}
+  //               />
+
+  //               <TextField
+  //                 variant="outlined"
+  //                 margin="normal"
+  //                 required
+  //                 fullWidth
+  //                 name="password"
+  //                 label="Password"
+  //                 type="password"
+  //                 id="password"
+  //                 autoComplete="current-password"
+  //                 error={passwordError.length > 0}
+  //                 helperText={passwordError}
+  //                 value={password}
+  //                 onChange={onChangePassword}
+  //               />
+  //               <Box style={{ display: "flex", justifyContent: "center" }}>
+  //                 {!load ? (
+  //                   <Button
+  //                     type="submit"
+  //                     variant="contained"
+  //                     color="primary"
+  //                     className={styles.submit}
+  //                   >
+  //                     Login
+  //                   </Button>
+  //                 ) : (
+  //                   <CircularProgress />
+  //                 )}
+  //               </Box>
+
+  //               <Button
+  //                 style={{
+  //                   padding: "2%",
+  //                   color: "azure",
+  //                   fontVariant: "ruby",
+  //                   backgroundColor: "red",
+  //                   width: "100%",
+  //                   margin: "-1% 0% 3%",
+  //                   fontSize: "101%",
+  //                 }}
+  //                 variant="contained"
+  //                 color="primary"
+  //                 fullWidth
+  //                 onClick={handleGetCredentials}
+  //               >
+  //                 Get Guest User Credentials
+  //               </Button>
+  //               <br />
+  //             </form>
+
+  //             <Grid container style={{ justifyContent: "center" }}>
+  //               <Grid item>
+  //                 <Link href="/register" variant="body2">
+  //                   {" "}
+  //                   Need an account?{" "}
+  //                 </Link>
+  //               </Grid>
+  //             </Grid>
+  //           </CardContent>
+  //         </Card>
+  //       </Box>
+  //     </Grid>
+  //   </div>
+  // );
+
   return (
     <div className={styles.background}>
       <CssBaseline />
@@ -123,17 +221,28 @@ const Login = () => {
         spacing={0}
         direction="column"
         alignItems="center"
-        justify-content="center"
-        style={{ minHeight: "100vh" }}
+        style={{ justifyContent: "center", minHeight: "100vh" }}
       >
-        <Box width="70vh" boxShadow={1}>
-          <Card className={styles.paper}>
+        <Box
+          width="70vh"
+          maxWidth="95%"
+          boxShadow={1}
+          style={{ width: "100%", maxWidth: "400px" }}
+        >
+          <Card className={styles.paper} style={{ padding: "20px" }}>
             <CardContent>
-              <Typography component="h1" variant="h5">
-                {" "}
-                Login{" "}
+              <Typography
+                component="h1"
+                variant="h5"
+                style={{ display: "flex", justifyContent: "center" }}
+              >
+                Login
               </Typography>
-              <form className={styles.form} onSubmit={onSubmit}>
+              <form
+                className={styles.form}
+                onSubmit={onSubmit}
+                style={{ width: "100%" }}
+              >
                 <TextField
                   variant="outlined"
                   margin="normal"
@@ -164,13 +273,14 @@ const Login = () => {
                   value={password}
                   onChange={onChangePassword}
                 />
-                <Box display="flex" justifyContent="center">
+                <Box style={{ display: "flex", justifyContent: "center" }}>
                   {!load ? (
                     <Button
                       type="submit"
                       variant="contained"
                       color="primary"
                       className={styles.submit}
+                      style={{ width: "50%", margin: "20px 0" }}
                     >
                       Login
                     </Button>
@@ -199,7 +309,7 @@ const Login = () => {
                 <br />
               </form>
 
-              <Grid container justify-content="center">
+              <Grid container style={{ justifyContent: "center" }}>
                 <Grid item>
                   <Link href="/register" variant="body2">
                     {" "}
